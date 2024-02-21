@@ -4,21 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>One EPIC candidate for your EPIC Agency</title>
+  <link rel="icon" href="./images/favicon.jpg">
 </head>
 <style>
   @font-face {
     font-family: sang-bleu;
-    src: url('./fonts/SangBleuKingdomTrial-Bold.otf');
+    src: url('./fonts/SangBleuEmpire-Bold-WebTrial.ttf');
   }
-
-  ._text.-sangbleu {
-    font-family: sang-bleu;
-  }
-
-  ._text.-noserif {
-    font-family: sans-serif;
-  }
-
+  
   body {
     background-color: #000;
     color: #f1dca8;
@@ -29,21 +22,21 @@
     padding: 0 2rem;
   }
   
-  h1 {
-    font-size: 110px;
-    letter-spacing: -2px;
-    line-height: 1;
-    color: #c0ae7e;
-  }
-
-  header {
+  header, footer {
     max-width: 960px;
   }
-
-  main {
-    max-width: 780px;
+  
+  section {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
-
+  
+  section :not(figure) {
+    max-width: 760px;
+  }
+  
   main::before {
     content: '';
     display: block;
@@ -51,8 +44,9 @@
     height: 1px;
     background-color: #f1dca8;
     margin-bottom: 4rem;
+    margin-top: 4rem;
   }
-
+  
   main::after {
     content: '';
     display: block;
@@ -61,80 +55,183 @@
     background-color: #f1dca8;
     margin-top: 4rem;
   }
+  
+  h1, 
+  h2 {
+    font-family: sang-bleu;
+    color: #c0ae7e;
+    line-height: 1;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    letter-spacing: -2px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 110px;
+    }
+  }
+  
+  h2 {
+    width: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    h2 {
+      font-size: 60px;
+    }
+  }
+  
+  p, 
+  li, 
+  figcaption {
+    font-family: Inter, sans-serif;
+  }
+  
+  p {
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 2.125rem;
+  }
+  
+  li {
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+  
+  a {
+    color: inherit;
+    font-weight: bold;
+  }
+  
+  figure {
+    padding: .5rem;
+    border: 1px solid #c0ae7e;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+  
+  figcaption {
+    font-size: .75rem;
+    margin-top: .5rem;
+  }
+  
+  address {
+    font-style: normal;
+  }
+  
+  footer {
+    margin-top: 4rem;
+    display: flex;
+    flex-flow: column;
+  }
+  
+  @media (min-width: 640px) {
+    footer {
+      flex-flow: row;
+    }
+  }
+  
+  .intro {
+    font-family: sans-serif;
+    font-size: 1.825rem;
+    margin-bottom: 2.125rem;
+    line-height: 40px;
+  }
+  
+  .picture {
+    max-width: 100%;
+    width: 1024px;
+  }
 </style>
 <body>
-  <header class="_margin -auto">
-    <small>Hey good news, you've (maybe) found your next </small>
-    <h1 class="_text -xl -sangbleu">Medior front-end developer</h1>
-    <p class="_text -l -noserif">
-      Are you looking for one EPIC candidate? Nice to meet you! I search to join a team to work in a team of T shaped developer and increase my skills by working on Awwwardable project.
-    </p>
+  <header>
+    <small>Good news, you've (maybe) found your new</small>
+    <h1>Medior front-end developer</h1>
   </header>
   <main>
-    <section class="_margin -auto">
+    <section>
+      <p class="intro">
+        So, you are looking for one EPIC candidate?
+      </p>
       <figure>
-        <picture srcset="#" type="image/webp">
-          <img src="#" alt="A picture of Jonathan Schoonbroodt, very young">
-        </picture>
+        <img class="picture" src="./images/jonathan-schoonbroodt.jpg" alt="A picture of the younger version of Jonathan Schoonbroodt">
         <figcaption>
-          This picture is a bit old but I promise, I'm not a Cowboy anymore!
+          This picture is also a bit old but I promise, I'm not a cowboy anymore!
         </figcaption>
       </figure>
-      <h2 class="_text -l -sangbleu">
-        Who am I
+    </section>
+    <section>
+      <h2>
+        Who am I?
       </h2>
       <p>
-        I'm a thirsty years old guy passionate about web development and entrepreneurship. I'm also a PC gamer, casual guitarist and (red, red) wine enjoyer. I'm born in Theux, near Liège, where I've done my studies and have one office while I was a startup entrepreneur, incubated at VentureLab.
+        I'm Jonathan, a thirty-years-old guy from Theux, near Liège, passionate about web development. 
+        I want to join a team to work collaboratively and enhance my skills by working on award-winning projects.
+      </p>
+      <p> 
+        I love building things and making them look beautiful on any resolution. I go the extra mile to provide optimized code for SEO, performance, and accessibility.
       </p>
       <p>
-        I've strong skills in <abbr>HTML5</abbr> and <abbr>CSS3</abbr> and I'm a decent JavaScript developper. I love building things, and make them look beautiful (however the resolution).
+        But words are what they are, so why don't you take a look at my <a href="https://lasmala.be" title="Take a look at my latest piece of work">latest piece of work</a> instead of reading a boring text? Of course, feel free to run a Lighthouse audit. 📈
       </p>
-      <p>
-        But words are what they are, so why don't you take a look to my <a href="https://lasmala.be" title="Take a look to my latest piece of work">latest piece of work</a> instead of reading a boring text? Of course, feel free to run one Lighthouse audit.
-      </p>
+      <a href="https://lasmala.be" title="Access the La SMALA website">
+        <img class="picture" src="./images/la-smala-website.png" alt="A picture of the La SMALA website">
+      </a>
     </section>
-    <section class="_margin -auto">
-      <h2 class="_text -l -sangbleu">
+    <section>
+      <h2>
         Skills I have
       </h2>
-      <ol>
+      <ul>
         <li>
-          Strong skills in <abbr>HTML5</abbr> and <abbr>CSS3</abbr>, focusing on delivering high-end user experience, however the resolution is. I make the extra mile to provide optimized code for <abbr>SEO</abbr>, performance and accessibility. 
-          I make <abbr>W3C</abbr> valid code and adapt myself easily to the <abbr>CSS</abbr> technology or framework (<abbr>SASS</abbr>, <abbr>LESS CSS</abbr>, Tailwind or whatever) and / or methodology (BEM, RSCSS or whatever) used in the project. I love to work on <abbr>CSS</abbr> animation.
+          I use <abbr title="HyperText Markup Language">HTML5</abbr>, <abbr title="Cascading Style Sheets">CSS3</abbr>, and JavaScript daily, focusing on delivering the best user experience. 
+          I write <abbr title="World Wide Web Consortium">W3C</abbr>-valid markup and adapt easily to the CSS tech or framework (Sass, Less CSS, Tailwind, etc.) 
+          and/or methodology (BEM, RSCSS, or whatever) used in the project. 
+          I love working on CSS animation.
         </li>
         <li>
-          Decent skills in Vanilla JavaScript (<abbr>ES6+</abbr>). But as JavaScript is a rabbit hole, I still can dig in it!
+          I already use Git (mostly with GitHub Desktop) and I'm not afraid of the <abbr title="Command Line Interface">CLI</abbr>.
         </li>
         <li>
-          I'm not a designer but I've a sharp eye and I use Figma daily. I always try to make the best UX possible.
+          Currently diving into the Svelte.js framework (I'm rewriting a full-stack side project web app made in VanillaJS and Node.js using Svelte).
         </li>
         <li>
-          I use Git (mostly without GitHub desktop) and I'm not afraid of the command-line.
+          I have some knowledge in backend development (using Node.js with Express).
         </li>
         <li>
-          Some knowledge with Svelte.js framework  (I'm currently rewriting a fullstack side project made in VanillaJS and Node.js with Svelte).
+          I'm not a designer, but I have a keen eye, and I use Figma daily.
         </li>
-        <li>
-          Some knowledge in back-end, using Node.js (with Express).
-        </li>
-      </ol>
+      </ul>
     </section>
-    <section class="_margin -auto">
-      <h2 class="_text -l -sangbleu">
+    <section>
+      <h2>
         Are you still reading?
       </h2>
-      <p>Let's meet in real-life! I can come to visit your agency and drink a coffee to talk a bit more and showcase you some of my previous work (if you're interested).</p>
-      <!-- cta -->
+      <p>Let's meet in real life! I can visit your agency and have a coffee to discuss further.</p>
+      <a href="mailto:schoonbroodtjonathan@gmail.com" title="Send an email">Let's meet!</a>
     </section>
   </main>
-  <footer class="_flex -row -wrap">
-    <div class="_flex -column">
+  <footer>
+    <div class="contact-container">
       <span>Jonathan Schoonbroodt</span>
       <address>
         Chemin du Benay 1, 4910 Theux
         <br>
         Belgium
       </address>
+    </div>
+    <div class="socials-container">
+      <img src="./images/linkedin.svg" alt="LinkedIn icon">
+      <img src="./images/github.svg" alt="GitHub icon">
     </div>
   </footer>
 </body>
