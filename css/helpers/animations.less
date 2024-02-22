@@ -1,0 +1,104 @@
+@keyframes expandNavbar {
+  0% {
+    max-width: 1024px;
+    border-bottom: 1px solid #c0ae7e;
+  }
+  
+  15% {
+    max-width: 1024px;
+    border-bottom: 0;
+  }
+  
+  100% {
+    max-width: 100%;
+    border-width: 0px;
+  }
+}
+
+@keyframes reduceNavbar {
+  0% {
+    max-width: 100%;
+  }
+  
+  100% {
+    max-width: 1024px;
+  }
+}
+
+@keyframes navbarFirstBarShake {
+  from {
+    transform: translate(0);
+  }
+  
+  33% {
+    transform: translateX(5px);
+  }
+  
+  66% {
+    transform: translateX(-5px);
+  }
+  
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes navbarSecondBarShake {
+  from {
+    transform: translate(0);
+  }
+  
+  25% {
+    transform: translateX(-5px);
+  }
+  
+  50% {
+    transform: translateX(5px);
+  }
+  
+  75% {
+    transform: translateX(-5px);
+  }
+  
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes navbarThirdBarShake {
+  from {
+    transform: translate(0);
+  }
+  
+  33% {
+    transform: translateX(-5px);
+  }
+  
+  66% {
+    transform: translateX(5px);
+  }
+  
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes scaleSlightly {
+  0% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(1.125);
+  }
+}
+
+@keyframes infiniteRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
