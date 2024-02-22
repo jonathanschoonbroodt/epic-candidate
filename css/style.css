@@ -1,3 +1,12 @@
+/* 
+  selecteurs
+  navbar
+  footer
+  layout
+  components
+  element
+*/
+
 @font-face {
   font-family: sang-bleu;
   src: url('../fonts/SangBleuEmpire-Bold-WebTrial.ttf');
@@ -20,7 +29,7 @@ body {
   z-index: 0;
 }
 
-nav {
+.navbar-container {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -49,7 +58,7 @@ nav {
   z-index: 1;
 }
 
-nav small {
+.navbar-container small {
   text-transform: uppercase;
   font-size: .625rem;
   font-weight: 100;
@@ -57,22 +66,22 @@ nav small {
   text-align: center;
 }
 
-nav.expanded .navbar-subcontainer {
+.navbar-container.expanded .navbar-subcontainer {
   animation: expandNavbar .75s ease-in-out forwards;
   max-width: calc(100% - 4em);
 }
 
-nav.burgeropen {
+.navbar-container.burgeropen {
   background-color: #080808;
 }
 
-nav.expanded small,
-nav.burgeropen small,
-nav.burgeropen .logo-container {
+.navbar-container.expanded small,
+.navbar-container.burgeropen small,
+.navbar-container.burgeropen .logo-container {
   visibility: hidden;
 }
 
-nav.reduced .navbar-subcontainer {
+.navbar-container.reduced .navbar-subcontainer {
   animation: reduceNavbar .5s ease-out forwards;
 }
 
