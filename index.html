@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Discover one EPIC candidate for the Medior Front-end developer position.">
   <title>One EPIC candidate for your EPIC Agency</title>
   <link rel="icon" href="./images/favicon.jpg">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-  <nav>
-    <div class="logo-container">
-      <a href="#" title="Scroll to the top">
-        <img class="logo" src="./images/logo.png">
-      </a>
-    </div>
-     <small>Medior front-end developer</small>
-    <div class="burger-container" id="burger-container" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
-      <div class="bar-container">
-        <div class="bar _color -bgwhite"></div>
-        <div class="bar _color -bgwhite"></div>
-        <div class="bar _color -bgwhite"></div>
+<body class="layout-container">
+  <nav class="navbar-container">
+    <div class="navbar-subcontainer">
+      <div class="logo-container">
+        <a href="#" title="Scroll to the top">
+          <picture>
+            <img class="logo" src="./images/logo.png" alt="Logo" width="40" height="35">
+          </picture>
+        </a>
+      </div>
+      <small>Medior front-end developer</small>
+      <div class="burger-container" id="burger-container" aria-label="Menu" title="Open or close the navbar">
+        <div class="bar-container">
+          <div class="bar _color -bgwhite"></div>
+          <div class="bar _color -bgwhite"></div>
+          <div class="bar _color -bgwhite"></div>
+        </div>
+      </div>
+      <div class="modal-navbar" id="modal-navbar">
+        <div class="modal-content">
+          Thank's for clicking on the burger but there is nothing to see here!
+        </div>
       </div>
     </div>
   </nav>
@@ -27,17 +37,24 @@
     <small>Good news, you've (maybe) found your new</small>
     <h1>Medior front-end developer</h1>
   </header>
-  <main>
-    <section>
+  <main class="main-container">
+    <a href="#" title="Download my resume">
+      <picture>
+        <img class="downloadresume" src="./images/download-resume.png" alt="Icon for download resume button">
+      </picture>
+    </a>
+    <section class="section-container -intro">
       <h2 class="intro">So, you are looking for one EPIC candidate?</h2>
       <figure>
-        <img class="banner" src="./images/jonathan-schoonbroodt.jpg" alt="A picture of the younger version of Jonathan Schoonbroodt">
+        <picture>
+          <img class="banner" src="./images/jonathan-schoonbroodt.jpg" alt="A picture of the younger version of Jonathan Schoonbroodt" width="1024" height="688">
+        </picture>
         <figcaption>
           This picture is also a bit old but I promise, I'm not a cowboy anymore!
         </figcaption>
       </figure>
     </section>
-    <section>
+    <section class="section-container -who">
       <h2>
         Who am I?
       </h2>
@@ -52,10 +69,12 @@
         But words are what they are, so why don't you take a look at my <a href="https://lasmala.be" title="Take a look at my latest piece of work">latest piece of work</a> instead of reading a boring text? Of course, feel free to run a Lighthouse audit. 📈
       </p>
       <a href="https://lasmala.be" title="Access the La SMALA website">
-        <img class="picture" src="./images/la-smala-website.png" alt="A picture of the La SMALA website">
+        <picture>
+          <img class="picture" src="./images/la-smala-website.png" alt="A picture of the La SMALA website">
+        </picture>
       </a>
     </section>
-    <section>
+    <section class="section-container -skills">
       <h2>
         Skills I have
       </h2>
@@ -80,7 +99,7 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section class="section-container -stillreading">
       <h2>
         Are you still reading?
       </h2>
@@ -94,9 +113,9 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="footer-container">
     <div class="footer-subcontainer">
-      <div>
+      <div class="contact-container">
         <span>Jonathan Schoonbroodt</span>
         <address>
           Chemin du Benay 1, 4910 Theux
@@ -104,12 +123,16 @@
           Belgium
         </address>
       </div>
-      <div>
+      <div class="socials-container">
         <a href="https://linkedin.com/in/jonathanschoonbroodt/" title="Access to Jonathan Schoonbroodt LinkedIn profile">
-          <img src="./images/linkedin.svg" alt="LinkedIn icon">
+          <picture>
+            <img src="./images/linkedin.svg" alt="LinkedIn icon" width="40" height="40">
+          </picture>
         </a>
         <a href="https://github.com/jonathanschoonbroodt" title="Access to Jonathan Schoonbroodt GitHub page">
-          <img src="./images/github.svg" alt="GitHub icon">
+          <picture>
+            <img src="./images/github.svg" alt="GitHub icon" width="40" height="40">
+          </picture>
         </a>
       </div>
     </div>
