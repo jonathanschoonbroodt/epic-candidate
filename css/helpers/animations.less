@@ -25,6 +25,32 @@
   }
 }
 
+@keyframes navbarFirstBarCrossing {
+  from {
+    width: 100%;
+    rotate: 45deg;
+  }
+  
+  100% {
+    width: 130%;
+    rotate: 45deg;
+    translate: 0px 15px;
+  }
+}
+
+@keyframes navbarThirdBarCrossing {
+  from {
+    width: 100%;
+    rotate: -45deg;
+  }
+  
+  100% {
+    width: 130%;
+    rotate: -45deg;
+    translate: 0 -12px;
+  }
+}
+
 @keyframes navbarFirstBarShake {
   from {
     transform: translate(0);
@@ -86,10 +112,17 @@
 @keyframes scaleSlightly {
   0% {
     transform: scale(1);
+    letter-spacing: 0;
   }
   
+  50% {
+    transform: scale(1.1);
+    letter-spacing: 3px;
+  }
+
   100% {
-    transform: scale(1.125);
+    transform: scale(1.1);
+    letter-spacing: 2px;
   }
 }
 

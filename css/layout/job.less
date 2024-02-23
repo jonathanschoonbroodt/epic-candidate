@@ -53,6 +53,7 @@
     
     .downloadresume {
       max-width: 80px;
+      height: 80px;
       width: 100%;
       position: absolute;
       top: -40px;
@@ -65,6 +66,7 @@
       
       @media (min-width: 640px) {
         max-width: 120px;
+        height: 120px;
         top: -60px;
       }
     }
@@ -91,8 +93,11 @@
       max-width: 760px;
     }
     
-    p {
+    h2, p {
       width: 100%;
+    }
+    
+    p {
       line-height: 1.6;
       margin: 0;
       margin-bottom: 2rem;
@@ -131,6 +136,7 @@
     .picture {
       max-width: 100%;
       width: 760px;
+      height: auto;
     }
     
     .contact-container {
@@ -172,7 +178,7 @@
       font-family: sang-bleu;
       
       &:hover {
-        animation: scaleSlightly .25s ease-in-out forwards;
+        animation: scaleSlightly .75s ease forwards;
       }
       
       a {

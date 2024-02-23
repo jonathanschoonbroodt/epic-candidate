@@ -37,7 +37,6 @@ address {
 }
 a {
   color: inherit;
-  font-weight: bold;
 }
 address {
   font-style: normal;
@@ -65,25 +64,32 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
   max-width: 100%;
-  height: 40px;
   max-height: 100%;
   border-radius: 100%;
   z-index: 998;
   cursor: pointer;
 }
-.burger-container:hover .bar:nth-child(1) {
-  -webkit-animation: navbarFirstBarShake 1s ease-in-out forwards infinite;
-          animation: navbarFirstBarShake 1s ease-in-out forwards infinite;
+.burger-container:hover .bar:nth-child(1),
+.burger-container:active .bar:nth-child(1) {
+  -webkit-animation: navbarFirstBarShake 1s ease-in-out;
+          animation: navbarFirstBarShake 1s ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
-.burger-container:hover .bar:nth-child(2) {
-  -webkit-animation: navbarSecondBarShake 1s ease-in-out forwards infinite;
-          animation: navbarSecondBarShake 1s ease-in-out forwards infinite;
+.burger-container:hover .bar:nth-child(2),
+.burger-container:active .bar:nth-child(2) {
+  -webkit-animation: navbarSecondBarShake 1s ease-in-out;
+          animation: navbarSecondBarShake 1s ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
-.burger-container:hover .bar:nth-child(3) {
-  -webkit-animation: navbarThirdBarShake 1s ease-in-out forwards infinite;
-          animation: navbarThirdBarShake 1s ease-in-out forwards infinite;
+.burger-container:hover .bar:nth-child(3),
+.burger-container:active .bar:nth-child(3) {
+  -webkit-animation: navbarThirdBarShake 1s ease-in-out;
+          animation: navbarThirdBarShake 1s ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 .burger-container .bars-container {
   display: flex;
@@ -91,6 +97,10 @@ figure {
   justify-content: space-between;
   width: 30px;
   height: 30px;
+}
+.burger-container .bar {
+  -webkit-animation: none;
+          animation: none;
 }
 .modal-navbar {
   display: none;
@@ -101,8 +111,14 @@ figure {
   left: 0;
   top: 80px;
   background-color: #080808;
-  font-size: 60px;
+  font-size: 2.5rem;
+  line-height: 1;
   z-index: 999;
+}
+@media (min-width: 960px) {
+  .modal-navbar {
+    font-size: 60px;
+  }
 }
 .modal-navbar.-active {
   display: flex;
@@ -133,17 +149,15 @@ figure {
   translate: -4px 0px;
 }
 .navbar-container.-burgeropen .bar:nth-child(1) {
-  width: 130%;
-  rotate: 45deg;
-  translate: 0px 15px;
+  -webkit-animation: navbarFirstBarCrossing 1s ease-in-out forwards;
+          animation: navbarFirstBarCrossing 1s ease-in-out forwards;
 }
 .navbar-container.-burgeropen .bar:nth-child(2) {
   display: none;
 }
 .navbar-container.-burgeropen .bar:nth-child(3) {
-  width: 130%;
-  rotate: -45deg;
-  translate: 0 -12px;
+  -webkit-animation: navbarThirdBarCrossing 1s ease-in-out forwards;
+          animation: navbarThirdBarCrossing 1s ease-in-out forwards;
 }
 .navbar-container.-expanded small,
 .navbar-container.-burgeropen small,
@@ -187,10 +201,13 @@ figure {
 .navbar-container .logo-container,
 .navbar-container .burger-container {
   background-color: #080808;
-  padding: 0.5rem;
 }
 .navbar-container .logo-container {
   border-radius: 100% 100% 0 0;
+  padding: 0.5rem;
+}
+.navbar-container .burger-container {
+  padding: 1rem;
 }
 .navbar-container .logo-container img {
   display: flex;
@@ -282,6 +299,7 @@ figure {
 }
 .layout-job main .downloadresume {
   max-width: 80px;
+  height: 80px;
   width: 100%;
   position: absolute;
   top: -40px;
@@ -295,6 +313,7 @@ figure {
 @media (min-width: 640px) {
   .layout-job main .downloadresume {
     max-width: 120px;
+    height: 120px;
     top: -60px;
   }
 }
@@ -316,8 +335,11 @@ figure {
 .layout-job .section-container li {
   max-width: 760px;
 }
+.layout-job .section-container h2,
 .layout-job .section-container p {
   width: 100%;
+}
+.layout-job .section-container p {
   line-height: 1.6;
   margin: 0;
   margin-bottom: 2rem;
@@ -350,6 +372,7 @@ figure {
 .layout-job .section-container .picture {
   max-width: 100%;
   width: 760px;
+  height: auto;
 }
 .layout-job .section-container .contact-container {
   display: flex;
@@ -387,8 +410,8 @@ figure {
   font-family: sang-bleu;
 }
 .layout-job .section-container .tothetop-container:hover {
-  -webkit-animation: scaleSlightly 0.25s ease-in-out forwards;
-          animation: scaleSlightly 0.25s ease-in-out forwards;
+  -webkit-animation: scaleSlightly 0.75s ease forwards;
+          animation: scaleSlightly 0.75s ease forwards;
 }
 .layout-job .section-container .tothetop-container a {
   text-decoration: none;
@@ -435,6 +458,50 @@ figure {
   }
   100% {
     max-width: 1024px;
+  }
+}
+@-webkit-keyframes navbarFirstBarCrossing {
+  from {
+    width: 100%;
+    rotate: 45deg;
+  }
+  100% {
+    width: 130%;
+    rotate: 45deg;
+    translate: 0px 15px;
+  }
+}
+@keyframes navbarFirstBarCrossing {
+  from {
+    width: 100%;
+    rotate: 45deg;
+  }
+  100% {
+    width: 130%;
+    rotate: 45deg;
+    translate: 0px 15px;
+  }
+}
+@-webkit-keyframes navbarThirdBarCrossing {
+  from {
+    width: 100%;
+    rotate: -45deg;
+  }
+  100% {
+    width: 130%;
+    rotate: -45deg;
+    translate: 0 -12px;
+  }
+}
+@keyframes navbarThirdBarCrossing {
+  from {
+    width: 100%;
+    rotate: -45deg;
+  }
+  100% {
+    width: 130%;
+    rotate: -45deg;
+    translate: 0 -12px;
   }
 }
 @-webkit-keyframes navbarFirstBarShake {
@@ -557,20 +624,34 @@ figure {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
+    letter-spacing: 0;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    letter-spacing: 3px;
   }
   100% {
-    -webkit-transform: scale(1.125);
-            transform: scale(1.125);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    letter-spacing: 2px;
   }
 }
 @keyframes scaleSlightly {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
+    letter-spacing: 0;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    letter-spacing: 3px;
   }
   100% {
-    -webkit-transform: scale(1.125);
-            transform: scale(1.125);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    letter-spacing: 2px;
   }
 }
 @-webkit-keyframes infiniteRotation {

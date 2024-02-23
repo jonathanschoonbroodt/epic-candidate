@@ -1,6 +1,7 @@
 const body = document.querySelector('body')
 const navbar = document.querySelector('.navbar-container')
 const burgerContainer = document.getElementById('burger-container')
+const barsContainer = document.getElementById('bars-container')
 const modalNavbar = document.getElementById('modal-navbar')
 
 document.addEventListener('scroll', (event) => {

@@ -14,9 +14,7 @@
     }
 
     .bar:nth-child(1) {
-      width: 130%;
-      rotate: 45deg;
-      translate: 0px 15px;
+      animation: navbarFirstBarCrossing 1s ease-in-out forwards;
     }
 
     .bar:nth-child(2) {
@@ -24,9 +22,7 @@
     }
 
     .bar:nth-child(3) {
-      width: 130%;
-      rotate: -45deg;
-      translate: -0 -12px;
+      animation: navbarThirdBarCrossing 1s ease-in-out forwards;
     }
   }
   
@@ -74,11 +70,15 @@
   .logo-container,
   .burger-container {
     background-color: #080808;
-    padding: .5rem;
   }
   
   .logo-container {
     border-radius: 100% 100% 0 0;
+    padding: .5rem;
+  }
+
+  .burger-container {
+    padding: 1rem;
   }
   
   .logo-container img {

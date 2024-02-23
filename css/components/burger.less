@@ -2,25 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
   max-width: 100%;
-  height: 40px;
   max-height: 100%;
   border-radius: 100%;
   z-index: 998;
   cursor: pointer;
-  
-  &:hover {
+
+  &:hover,
+  &:active {
     .bar:nth-child(1) {
-      animation: navbarFirstBarShake 1s ease-in-out forwards infinite;
+      animation: navbarFirstBarShake 1s ease-in-out;
+      animation-iteration-count: 1;
     }
     
     .bar:nth-child(2) {
-      animation: navbarSecondBarShake 1s ease-in-out forwards infinite;
+      animation: navbarSecondBarShake 1s ease-in-out;
+      animation-iteration-count: 1;
     }
     
     .bar:nth-child(3) {
-      animation: navbarThirdBarShake 1s ease-in-out forwards infinite;
+      animation: navbarThirdBarShake 1s ease-in-out;
+      animation-iteration-count: 1;
     }
   }
   
@@ -31,4 +33,9 @@
     width: 30px;
     height: 30px;
   }
+
+  .bar {
+    animation: none;
+  }
 }
+
