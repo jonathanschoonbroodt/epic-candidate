@@ -366,6 +366,19 @@ figure {
   height: 0.225rem;
   background-color: #c0ae7e;
 }
+.downloadresume {
+  max-width: 80px;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  top: -40px;
+  right: 1rem;
+  -webkit-animation: infiniteRotation 9s linear infinite;
+          animation: infiniteRotation 9s linear infinite;
+}
+.downloadresume:hover {
+  cursor: pointer;
+}
 .burger-container {
   display: flex;
   justify-content: center;
@@ -408,6 +421,42 @@ figure {
   -webkit-animation: none;
           animation: none;
 }
+.contact-container {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-top: 1px solid #c0ae7e;
+  border-bottom: 1px solid #c0ae7e;
+  padding: 4rem 0;
+}
+.contact-container small {
+  font-size: 0.625rem;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+.contact-container .meet,
+.contact-container .interested {
+  -webkit-perspective: 2560px;
+          perspective: 2560px;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+.contact-container .meet {
+  font-size: 2.5rem;
+  font-family: sang-bleu;
+  color: #c0ae7e;
+}
+.contact-container .meet:hover {
+  color: #f1dca8;
+}
+@media (min-width: 640px) {
+  .contact-container .meet {
+    font-size: 60px;
+  }
+}
 .modal-navbar {
   display: none;
   position: fixed;
@@ -439,6 +488,16 @@ figure {
   .modal-navbar .modal-content {
     max-width: 1024px;
   }
+}
+.tothetop-container {
+  font-family: sang-bleu;
+}
+.tothetop-container:hover {
+  -webkit-animation: scaleSlightly 0.75s ease forwards;
+          animation: scaleSlightly 0.75s ease forwards;
+}
+.tothetop-container a {
+  text-decoration: none;
 }
 .navbar-container {
   position: fixed;
@@ -603,19 +662,6 @@ figure {
 .layout-job main h2:not(.intro) {
   margin-bottom: 2.865rem;
 }
-.layout-job main .downloadresume {
-  max-width: 80px;
-  height: 80px;
-  width: 100%;
-  position: absolute;
-  top: -40px;
-  right: 1rem;
-  -webkit-animation: infiniteRotation 9s linear infinite;
-          animation: infiniteRotation 9s linear infinite;
-}
-.layout-job main .downloadresume:hover {
-  cursor: pointer;
-}
 @media (min-width: 640px) {
   .layout-job main .downloadresume {
     max-width: 120px;
@@ -681,53 +727,11 @@ figure {
   height: auto;
 }
 .layout-job .section-container .contact-container {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-top: 1px solid #c0ae7e;
-  border-bottom: 1px solid #c0ae7e;
-  padding: 4rem 0;
   margin-top: 2rem;
-}
-.layout-job .section-container .contact-container small {
-  font-size: 0.625rem;
-  font-weight: 100;
-  letter-spacing: 5px;
-}
-.layout-job .section-container .contact-container .meet,
-.layout-job .section-container .contact-container .interested {
-  -webkit-perspective: 2560px;
-          perspective: 2560px;
-  -webkit-transform-origin: left center;
-          transform-origin: left center;
-}
-.layout-job .section-container .contact-container .meet {
-  font-size: 2.5rem;
-  font-family: sang-bleu;
-  color: #c0ae7e;
-}
-.layout-job .section-container .contact-container .meet:hover {
-  color: #f1dca8;
-}
-@media (min-width: 640px) {
-  .layout-job .section-container .contact-container .meet {
-    font-size: 60px;
-  }
 }
 .layout-job .section-container .tothetop-container {
   margin-top: 4rem;
   margin-bottom: 4rem;
-  font-family: sang-bleu;
-}
-.layout-job .section-container .tothetop-container:hover {
-  -webkit-animation: scaleSlightly 0.75s ease forwards;
-          animation: scaleSlightly 0.75s ease forwards;
-}
-.layout-job .section-container .tothetop-container a {
-  text-decoration: none;
 }
 @-webkit-keyframes expandNavbar {
   0% {

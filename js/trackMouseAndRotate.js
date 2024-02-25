@@ -5,6 +5,7 @@ const containerWidth = trackedContainer.clientWidth
 const containerHeight = trackedContainer.clientHeight
 const centralPositionWidth = containerWidth / 2
 const centralPositionHeight = containerHeight / 2
+
 let rotationValueY
 let rotationValueX
 

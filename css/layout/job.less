@@ -52,18 +52,6 @@
     }
     
     .downloadresume {
-      max-width: 80px;
-      height: 80px;
-      width: 100%;
-      position: absolute;
-      top: -40px;
-      right: 1rem;
-      animation: infiniteRotation 9s linear infinite;  
-      
-      &:hover {
-        cursor: pointer;
-      }
-      
       @media (min-width: 640px) {
         max-width: 120px;
         height: 120px;
@@ -140,56 +128,12 @@
     }
     
     .contact-container {
-      display: flex;
-      flex-flow: column;
-      width: 100%;
-      text-align: center;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-top: 1px solid #c0ae7e;
-      border-bottom: 1px solid #c0ae7e;
-      padding: 4rem 0;
       margin-top: 2rem;
-      
-      small {
-        font-size: .625rem;
-        font-weight: 100;
-        letter-spacing: 5px;
-      }      
-      
-      .meet, 
-      .interested {
-        perspective: 2560px; 
-        transform-origin: left center;
-      }
-      
-      .meet {
-        font-size: 2.5rem;
-        font-family: sang-bleu;
-        color: #c0ae7e;
-        
-        &:hover {
-          color: #f1dca8;
-        }
-        
-        @media (min-width: 640px) {
-          font-size: 60px;
-        }
-      }
     }
     
     .tothetop-container {
       margin-top: 4rem;
       margin-bottom: 4rem;
-      font-family: sang-bleu;
-      
-      &:hover {
-        animation: scaleSlightly .75s ease forwards;
-      }
-      
-      a {
-        text-decoration: none;
-      }
     }    
   }
 }
