@@ -432,6 +432,9 @@ figure {
   border-bottom: 1px solid #c0ae7e;
   padding: 4rem 0;
 }
+.contact-container:hover .meet {
+  opacity: 1;
+}
 .contact-container small {
   font-size: 0.625rem;
   font-weight: 100;
@@ -447,10 +450,9 @@ figure {
 .contact-container .meet {
   font-size: 2.5rem;
   font-family: sang-bleu;
-  color: #c0ae7e;
-}
-.contact-container .meet:hover {
   color: #f1dca8;
+  opacity: 0.75;
+  transition: opacity 1s ease-in-out;
 }
 @media (min-width: 640px) {
   .contact-container .meet {
